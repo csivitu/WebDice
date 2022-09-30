@@ -3,7 +3,15 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-color: white;
+	color: black;
 }
+
+.dark-mode {
+	background-color: black;
+	color: white;
+}
+
 
 h3 {
 	font-weight: 300;
