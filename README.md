@@ -4,8 +4,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/csivitu/WebDice">
-    <img src="https://csivit.com/images/favicon.png" alt="Logo" width="80">
+  <a href="https://github.com/csivitu/Template">
+    <img src="https://csivit.com/images/favicon.png" alt="Logo" width="80">  <img src="https://user-images.githubusercontent.com/64297193/193189952-c1771741-fc60-4bf5-abc2-34926f3f566c.png" alt="Logo" width="80">
   </a>
 
   <h3 align="center">Web Dice</h3>
