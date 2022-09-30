@@ -43,7 +43,8 @@
 
 ## About The Project
 
-[![][]](https://example.com)
+[![FindCSI]](https://raw.githubusercontent.com/csivitu/WebDice/master/Find-CSI/initial-ss.PNG?token=GHSAT0AAAAAABYS6MLOVM6D4BIGJROBQBKGYZWJ3TA)
+[![DaddyLaugh]](https://raw.githubusercontent.com/csivitu/WebDice/master/Daddy-Laugh/initial-ss.PNG?token=GHSAT0AAAAAABYS6MLPRUWMGKHAFEXEKYVWYZWJ4OQ)
 
 ### Built With
 
