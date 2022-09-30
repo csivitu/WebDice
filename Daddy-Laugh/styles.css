@@ -23,6 +23,7 @@ h3 {
 	border-radius: 50%;
 	border: 3px dashed goldenrod;
 	transition: transform 0.2s ease-in;
+	object-fit: cover;
 }
 
 .dad-img:hover {
