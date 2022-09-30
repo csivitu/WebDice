@@ -31,12 +31,18 @@
 				/>
 			</div>
 			<button class="play" onclick="play()">Play Laugh</button>
+			<div>
+				count : <p id="count"></p>
+			</div>
 		</div>
 
 		<script>
+			var count=0;
 			function play() {
 				var audio = document.getElementById("audio");
 				audio.play();
+				count++;
+				document.getElementById("count").innerHTML = count;
 			}
 		</script>
 	</body>
