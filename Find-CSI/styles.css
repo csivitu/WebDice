@@ -20,7 +20,7 @@ h1 {
 .csi {
 	position: relative;
 	left: 350px;
-	top: 100px;
+	top: 50px;
 }
 
 .box{
@@ -35,16 +35,20 @@ h1 {
 
 .shinchan {
 	position: relative;
-	left: 600px;
-	top: 100px;
+	left: 350px;
+	top: 50px;
 }
 
 .newimg {
 	position: relative;
-	left: 600px;
-	top: 100px;
+	left: 350px;
+	top: 50px;
 	background: url('./s1.jpg');
 	background-size:contain;
 	width: 150px;
 	height: 150px;
+}
+
+.p{
+	display:inline-block
 }
