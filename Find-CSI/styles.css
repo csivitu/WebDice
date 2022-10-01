@@ -1,5 +1,11 @@
 body {
 	background-color: #222;
+	color: white;
+}
+
+.dark-mode{
+	background-color: white;
+	color: #222;
 }
 
 h1 {
@@ -7,15 +13,24 @@ h1 {
 	font-family: "Luckiest Guy", cursive;
 	font-size: 60px;
 	color: aliceblue;
-	text-shadow: -5px -5px 0 #1a1a1a, 5px -5px 0 #1a1a1a, -5px 5px 0 #1a1a1a,
-		5px 5px 0 #1a1a1a;
 	opacity: 0.9;
+	
 }
 
 .csi {
 	position: relative;
 	left: 350px;
 	top: 100px;
+}
+
+.box{
+	height: 50px;
+	width: 50px;
+	background-color: black;
+	margin-right: 50%;
+	text-align: center;
+	font-size: 10px;
+	color: white;
 }
 
 .shinchan {

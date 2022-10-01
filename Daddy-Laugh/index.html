@@ -1,43 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="./styles.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200&display=swap"
-			rel="stylesheet"
-		/>
-		<title>Dad Laugh Button</title>
-	</head>
-	<body>
-		<div class="content">
-			<h1>Dad Laugh Button</h1>
-			<h3>For forkers who don't have a dad.</h3>
-			<!-- <h3>Dad laughs:</h3> -->
-			<audio id="audio" src="./Dad laugh.mp3"></audio>
-			<div class="dad">
-				<input
-					type="image"
-					class="dad-img"
-					src="./dad.jpg"
-					alt="dad-image"
-					width="200px"
-					height="200px"
-					onclick="play()"
-				/>
-			</div>
-			<button class="play" onclick="play()">Play Laugh</button>
-		</div>
 
-		<script>
-			function play() {
-				var audio = document.getElementById("audio");
-				audio.play();
-			}
-		</script>
-	</body>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="./styles.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200&display=swap"
+		rel="stylesheet" />
+	<title>Dad Laugh Button</title>
+</head>
+
+<body>
+	<div class="content">
+		<h1>Dad Laugh Button</h1>
+		<h3>For forkers who don't have a dad.</h3>
+		<!-- <h3>Dad laughs:</h3> -->
+		<audio id="audio" src="./Dad laugh.mp3"></audio>
+		<div class="dad">
+			<!-- <input type="image" class="dad-img" src="./assets/dad.jpg" alt="dad-image" width="200px" height="200px"
+				onclick="play()" /> -->
+		</div>
+		<button class="play" onclick="play()">Play Laugh</button>
+	</div>
+
+	<div>
+		<button onclick="darkMode()">Darkmode</button>
+	</div>
+
+	<script>
+		function play() {
+			var audio = document.getElementById("audio");
+			audio.play();
+		}
+
+		function darkMode() {
+			var element = document.body;
+			element.classList.toggle("dark-mode");
+		}
+
+		function randomImageNumber(min, max) {
+			return Math.floor(Math.random() * (max - min + 1) + min)
+		}
+
+		document.addEventListener("DOMContentLoaded", function (event) {
+			var img = document.createElement('img');
+			img.src = "./assets/dad" + randomImageNumber(0, 4) + ".jpg"
+			img.classList.add("dad-img");
+			img.width = 200
+			img.height = 200
+			img.addEventListener("click", function () {
+				play()
+			})
+			document.getElementsByClassName('dad')[0].appendChild(img);
+		});
+
+	</script>
+</body>
+
 </html>
