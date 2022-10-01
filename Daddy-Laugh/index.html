@@ -24,6 +24,7 @@
 				onclick="play()" /> -->
 		</div>
 		<button class="play" onclick="play()">Play Laugh</button>
+		<h3>The Laugh has been played <span id = "count">0</span> times!</h3>
 	</div>
 
 	<div>
@@ -31,6 +32,15 @@
 	</div>
 
 	<script>
+
+		let btn = document.querySelector(".play");
+		let count = 0;
+		btn.addEventListener("click", function() {
+  		count += 1;
+  		console.log(count);
+		document.getElementById("count").innerHTML = count;
+		});
+
 		function play() {
 			var audio = document.getElementById("audio");
 			audio.play();
