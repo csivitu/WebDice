@@ -14,7 +14,7 @@ h1 {
 
 .csi {
 	position: relative;
-	left: 350px;
+	left: 600px;
 	top: 100px;
 }
 
@@ -22,4 +22,14 @@ h1 {
 	position: relative;
 	left: 600px;
 	top: 100px;
+}
+
+.newimg {
+	position: relative;
+	left: 600px;
+	top: 100px;
+	background: url('./shinchan.jpg');
+	background-size:contain;
+	width: 150px;
+	height: 150px;
 }

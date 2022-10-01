@@ -1,40 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="stylesheet" href="styles.css" />
-		<title>Find CSI</title>
-	</head>
-	<body>
-		<div class="content">
-			<h1>FIND CSI</h1>
-			<div class="images">
-				<input
-					type="image"
-					class="csi"
-					src="./csi logo.jpg"
-					alt="csi"
-					onclick="correct()"
-				/>
-				<input
-					type="image"
-					class="shinchan"
-					src="./shinchan.jpg"
-					alt="shinchan"
-					width="150px"
-					height="150px"
-					onclick="wrong()"
-				/>
-			</div>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200&display=swap"
+		rel="stylesheet" />
+	<link rel="stylesheet" href="styles.css" />
+	<title>Find CSI</title>
+</head>
+
+<body>
+	<div class="content">
+		<h1>FIND CSI</h1>
+		<div class="images">
+
+			<input type="image" class="shinchan" src="./shinchan.jpg" alt="shinchan" width="150px" height="150px"
+				onclick="wrong()" />
+			<input type="image" class="csi" src="./csi logo.jpg" alt="csi" onclick="correct();streak()" />
+			<input type="button" style="background-color:#222 ; border:none" id="btnAdd" >
+			<p id="Spann"></p>
 		</div>
-		<script src="./script.js"></script>
-	</body>
+	</div>
+	<script src="./script.js"></script>
+</body>
+
 </html>
