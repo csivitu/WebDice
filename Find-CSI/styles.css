@@ -13,8 +13,6 @@ h1 {
 	font-family: "Luckiest Guy", cursive;
 	font-size: 60px;
 	color: aliceblue;
-	text-shadow: -5px -5px 0 #1a1a1a, 5px -5px 0 #1a1a1a, -5px 5px 0 #1a1a1a,
-		5px 5px 0 #1a1a1a;
 	opacity: 0.9;
 	
 }
