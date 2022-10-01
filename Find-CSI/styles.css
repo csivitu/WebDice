@@ -38,3 +38,13 @@ h1 {
 	left: 600px;
 	top: 100px;
 }
+
+.newimg {
+	position: relative;
+	left: 600px;
+	top: 100px;
+	background: url('./s1.jpg');
+	background-size:contain;
+	width: 150px;
+	height: 150px;
+}
