@@ -15,3 +15,10 @@ function wrong() {
 	document.getElementById("cs").innerHTML = streak;
 	document.getElementById("hs").innerHTML = highestStreak;
 }
+
+function darkMode() {
+	var element = document.body;
+	var element2 = document.querySelector("h1");
+	element.classList.toggle("dark-mode");
+	element2.classList.toggle("dark-mode");
+}
