@@ -15,6 +15,7 @@
 
 <body>
 	<div class="content">
+		<h4>Visitors : <p id="visitors">0</p></h4>
 		<h1>Dad Laugh Button</h1>
 		<h3>For forkers who don't have a dad.</h3>
 		<!-- <h3>Dad laughs:</h3> -->
@@ -56,6 +57,18 @@
 			})
 			document.getElementsByClassName('dad')[0].appendChild(img);
 		});
+
+		const countEl = document.getElementById('visitors');
+
+		updateVisitorCount();
+
+		function updateVisitorCount(){
+			fetch('https://api.countapi.xyz/update/lucent-moonbeam-6aa4d2.netlify.app/87645fa4-d2db-414c-9d0d-78c427e35003/?amount=1')
+			.then(res=>res.json())
+			.then(res=>{
+				countEl.innerHTML = res.value;
+			})
+		}
 
 	</script>
 </body>
