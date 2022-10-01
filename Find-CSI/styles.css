@@ -18,6 +18,16 @@ h1 {
 	top: 100px;
 }
 
+.box{
+	height: 50px;
+	width: 50px;
+	background-color: black;
+	margin-right: 50%;
+	text-align: center;
+	font-size: 10px;
+	color: white;
+}
+
 .shinchan {
 	position: relative;
 	left: 600px;
