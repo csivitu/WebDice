@@ -19,9 +19,8 @@ h1 {
 
 .csi {
 	position: relative;
-	left: 600px;
+	left: 350px;
 	top: 100px;
-	padding: 1px;
 }
 
 .box{
@@ -36,8 +35,6 @@ h1 {
 
 .shinchan {
 	position: relative;
-	height: 150px;
-	width: 150px;
 	left: 600px;
 	top: 100px;
 }
