@@ -56,3 +56,37 @@ h1 {
 	justify-content: center;
 	align-items: center;
 }
+
+.dropbtn {
+	background-color: black;
+	border-radius: 1rem;
+	color: white;
+	padding: 1rem;
+	font-size: 1rem;
+	border: none;
+	cursor: pointer;
+	margin: auto;
+  }
+
+  .dropdown {
+	display: flex;
+	flex-direction: column;
+	padding-top: 1rem;
+  }
+
+  .dropdown-content {
+	display: none;
+  }
+
+  .dropdown-content a {
+	text-decoration: none;
+  }
+
+  .show {
+	background-color: aliceblue;
+	border-radius: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}

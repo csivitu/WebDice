@@ -25,6 +25,27 @@
 			<!-- <input type="image" class="dad-img" src="./assets/dad.jpg" alt="dad-image" width="200px" height="200px"
 				onclick="play()" /> -->
 		</div>
+		<div class="dropdown">
+			<button onclick="laughChoice()" class="dropbtn">Select Laugh</button>
+			<div id="myDropdown" class="dropdown-content">
+				<div>
+					<audio id="audio" src="./Dad laugh.mp3"></audio>
+					<button class="play" onclick="play()">Laugh1</button>
+				</div>
+				<div>
+					<audio id="audio" src="./laugh1.mp3"></audio>
+					<button class="play" onclick="play()">Laugh2</button>
+				</div>
+				<div>
+					<audio id="audio" src="./laugh2.mp3"></audio>
+					<button class="play" onclick="play()">Laugh3</button>
+				</div>
+				<div>
+					<audio id="audio" src="./laugh3.mp3"></audio>
+					<button class="play" onclick="play()">Laugh4</button>
+				</div>
+			</div>
+		</div>
 		<button class="play" onclick="play()">Play Laugh</button>
 	</div>
 
@@ -91,6 +112,24 @@
 				playedDad.innerHTML = res.value;
 			})
 		}
+
+		function laughChoice() {
+  			document.getElementById("myDropdown").classList.toggle("show");
+		}
+
+		window.onclick = function(event) {
+  			if (!event.target.matches('.dropbtn')) {
+    			var dropdowns = document.getElementsByClassName("dropdown-content");
+    			var i;
+    			for (i = 0; i < dropdowns.length; i++) {
+      				var openDropdown = dropdowns[i];
+      				if (openDropdown.classList.contains('show')) {
+        				openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
 
 	</script>
 </body>
