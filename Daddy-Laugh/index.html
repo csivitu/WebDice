@@ -22,9 +22,37 @@
 		<div class="dad">
 			<!-- <input type="image" class="dad-img" src="./assets/dad.jpg" alt="dad-image" width="200px" height="200px"
 				onclick="play()" /> -->
-		</div>
+		<!-- </div>
 		<button class="play" onclick="play()">Play Laugh</button>
-	</div>
+	</div> -->
+	 
+		<div class="dropdown">
+			<button onclick="myFunction()" class="dropbtn">Laugh</button>
+			<div id="myDropdown" class="dropdown-content">
+				<div>
+					<audio id="audio" src="./Dad laugh.mp3"></audio>
+					<button class="play" onclick="play()">laugh1</button>
+				</div>
+				<div>
+					<audio id="audio" src="./laugh2.wav"></audio>
+					<button class="play" onclick="play()">laugh2</button>
+				</div>
+				<div>
+					<audio id="audio" src="./laugh3.wav"></audio>
+					<button class="play" onclick="play()">laugh3</button>
+				</div>
+				<div>
+					<audio id="audio" src="./laugh4.wav"></audio>
+					<button class="play" onclick="play()">laugh4</button>
+				</div>
+				<div>
+					<audio id="audio" src="./laugh5.wav"></audio>
+					<button class="play" onclick="play()">laugh5</button>
+				</div>
+			</div>
+		</div>
+
+	
 
 	<div>
 		<button onclick="darkMode()">Darkmode</button>
@@ -56,6 +84,23 @@
 			})
 			document.getElementsByClassName('dad')[0].appendChild(img);
 		});
+
+		function myFunction() {
+  			document.getElementById("myDropdown").classList.toggle("show");
+		}
+
+		window.onclick = function(event) {
+  			if (!event.target.matches('.dropbtn')) {
+    			var dropdowns = document.getElementsByClassName("dropdown-content");
+    			var i;
+    			for (i = 0; i < dropdowns.length; i++) {
+      				var openDropdown = dropdowns[i];
+      				if (openDropdown.classList.contains('show')) {
+        				openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
 
 	</script>
 </body>
