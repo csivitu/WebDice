@@ -90,7 +90,7 @@ function add(submit) {
 
 
 function shuffle() {
-	var container = document.getElementById("container");
+	var container = document.getElementById("result");
 	var elementsArray = Array.prototype.slice.call(container.getElementsByClassName('mx'));
 	elementsArray.forEach(function (element) {
 		container.removeChild(element);
