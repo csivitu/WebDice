@@ -15,6 +15,8 @@
 
 <body>
 	<div class="content">
+		<h4>Total number of Dads played : <p id="played">0</p></h4>
+		<h4>Total number of Dads Visited : <p id="visitors">0</p></h4>
 		<h1>Dad Laugh Button</h1>
 		<h3>For forkers who don't have a dad.</h3>
 		<!-- <h3>Dad laughs:</h3> -->
@@ -34,6 +36,7 @@
 		function play() {
 			var audio = document.getElementById("audio");
 			audio.play();
+			updatePlayed();
 		}
 
 		function darkMode() {
@@ -56,6 +59,38 @@
 			})
 			document.getElementsByClassName('dad')[0].appendChild(img);
 		});
+
+		const countEl = document.getElementById('visitors');
+
+		updateVisitorCount();
+
+		function updateVisitorCount(){
+			fetch('https://api.countapi.xyz/update/lucent-moonbeam-6aa4d2.netlify.app/87645fa4-d2db-414c-9d0d-78c427e35003/?amount=1')
+			.then(res=>res.json())
+			.then(res=>{
+				countEl.innerHTML = res.value;
+			})
+		}
+
+		const playedDad = document.getElementById('played');
+		getPlayed();
+
+
+		function getPlayed(){
+			fetch('https://api.countapi.xyz/update/nothing/70c4954a-f957-4b31-b76c-fe3075aee111/?amount=1')
+			.then(res=>res.json())
+			.then(res=>{
+				playedDad.innerHTML = res.value;
+			})
+		}
+
+		function updatePlayed(){
+			fetch('https://api.countapi.xyz/update/nothing/70c4954a-f957-4b31-b76c-fe3075aee111/?amount=1')
+			.then(res=>res.json())
+			.then(res=>{
+				playedDad.innerHTML = res.value;
+			})
+		}
 
 	</script>
 </body>

@@ -1,8 +1,16 @@
 var streak=0;
 var highestStreak=0;
+var res = document.getElementById('result');
 
 function correct() {
-	alert("Correct ans");
+	res.innerText = 'Right Ans';
+	res.style.padding= '.5rem';
+	res.style.backgroundColor = 'green'
+
+	setTimeout(() => {
+		res.innerText = '';
+	    res.style.padding= '0';
+	}, 2000);
 	streak++;
 	document.getElementById("cs").innerHTML = streak;
 	document.getElementById("hs").innerHTML = highestStreak;
@@ -11,7 +19,14 @@ function correct() {
 }
 
 function wrong() {
-	alert("Wrong ans");
+	res.innerText = 'Wrong Ans';
+	res.style.padding= '.5rem';
+	res.style.backgroundColor = 'red'
+
+	setTimeout(() => {
+		res.innerText = '';
+	    res.style.padding= '0';
+	}, 2000);
 	highestStreak = streak;
 	streak=0;
 	document.getElementById("cs").innerHTML = streak;
