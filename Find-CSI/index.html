@@ -24,15 +24,21 @@
 				Highest streak : <p id="hs">0</p>
 				Current streak : <p id="cs">0</p>
 			</div>
+
 			
 			<div class="images">
+
+
+			<div class="result" id="result"></div>
+			<div class="images" id="mx">
+
 				<input
 					type="image"
 					class="csi"
 					id="csi"
 					src="./csi logo.jpg"
 					alt="csi"
-					onclick="correct()"
+					onclick="correct();strk() ;shuffle()"
 				/>
 				<input
 					type="image"
@@ -44,6 +50,11 @@
 					height="150px"
 					onclick="wrong()"
 				/>
+			</div>
+			<div class="mx">
+				<input type="button" style="background-color:#222 ; border:none" id="btnAdd">
+				<p style="width:350px " id="Spann"></p>
+			</div>
 			</div>
 		</div>
 
