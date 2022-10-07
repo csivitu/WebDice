@@ -1,5 +1,6 @@
 [![csivit][csivitu-shield]][csivitu-url]
 [![Issues][issues-shield]][issues-url]
+[![All Contributors](https://img.shields.io/badge/all_contributors-12-orange.svg?style=flat-square)](#contributors)
 
 <!-- PROJECT LOGO -->
 <br />
@@ -83,7 +84,7 @@ npm install
 
 ## Usage
 
-These websites are "useless" in the sense that they dont have any concrete use in the day to day world, but they cn help you learn the basic frontend web-development skills in a super fun way :)
+These websites are "useless" in the sense that they dont have any concrete use in the day to day world, but they can help you learn the basic frontend web-development skills in a super fun way :)
 
 <!-- ROADMAP -->
 
@@ -92,6 +93,11 @@ These websites are "useless" in the sense that they dont have any concrete use i
 See the [open issues](https://github.com/csivitu/WebDice/issues) for a list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
+
+## Contributors
+
+<a href="https://github.com/csivitu/vbay/graphs/contributors">
+<img src="https://contrib.rocks/image?repo=csivitu/vbay" />
 
 ## Contributing
 
