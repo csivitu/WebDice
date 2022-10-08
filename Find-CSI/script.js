@@ -27,11 +27,13 @@ function wrong() {
 		res.innerText = '';
 	    res.style.padding= '0';
 	}, 2000);
+	if(highestStreak<streak)
 	highestStreak = streak;
 	streak=0;
 	document.getElementById("cs").innerHTML = streak;
 	document.getElementById("hs").innerHTML = highestStreak;
 	nextImage();
+	randomcsi();
 }
 
 function darkMode() {
@@ -96,8 +98,7 @@ function add(submit) {
 	element.type = submit;
 	element.name = submit;
 	element.onclick = function () {
-		alert("Wrong");
-		window.location.reload();
+		wrong();
 	};
 	var foo = document.getElementById("Spann");
 	foo.appendChild(element);
@@ -137,20 +138,3 @@ function shuffleArray(array) {
 		document.getElementById('shinchan').style.left = randomLeft1 +"px";
 }
 
-function randomcsi(){
-	document.getElementById('csi').src='csi logo.jpg';
-	var winWidth2 = window.innerWidth;
-	var winHeight2 = window.innerHeight;
-		
-		randomTop2 = getRandomNumber(0, winHeight2);
-		randomLeft2 = getRandomNumber(0, winWidth2);
-		
-		document.getElementById('csi').style.top= randomTop2 +"px";
-		document.getElementById('csi').style.left = randomLeft2 +"px";
-}
-
-function getRandomNumber(min, max) {
-    
-	return Math.random() * (max - min) + min;
-	
-}
