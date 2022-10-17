@@ -2,7 +2,9 @@ var streak=0;
 var highestStreak=0;
 var res = document.getElementById('result');
 
+
 function correct() {
+
 	res.innerText = 'Right Ans';
 	res.style.padding= '.5rem';
 	res.style.backgroundColor = 'green'
@@ -19,19 +21,32 @@ function correct() {
 }
 
 function wrong() {
+
 	res.innerText = 'Wrong Ans';
 	res.style.padding= '.5rem';
 	res.style.backgroundColor = 'red'
 
 	setTimeout(() => {
 		res.innerText = '';
-	    res.style.padding= '0';
+	    	res.style.padding= '0';
+
+		const boxes = document.querySelectorAll('.newimg');
+
+		boxes.forEach(box => {
+  		box.remove();
+		});
+		if(streak>highestStreak)
+		highestStreak = streak;
+		streak=0;
+		document.getElementById("cs").innerHTML = streak;
+		document.getElementById("hs").innerHTML = highestStreak;
+		document.getElementById('shinchan').src='./s1.jpg';
+		document.getElementById('shinchan').style.top= '100px';
+		document.getElementById('shinchan').style.left = '600px';
+		document.getElementById('csi').style.top= '100px';
+		document.getElementById('csi').style.left = '599px';
 	}, 2000);
-	highestStreak = streak;
-	streak=0;
-	document.getElementById("cs").innerHTML = streak;
-	document.getElementById("hs").innerHTML = highestStreak;
-	nextImage();
+
 }
 
 function darkMode() {
@@ -45,39 +60,43 @@ shinchanImages=['./s1.jpg','./s2.jpg','./s3.jpg','./s4.jpg','./s5.jpg'];
 
 function nextImage(){
 	//Choosing Random image
+
 	img=shinchanImages[Math.floor(Math.random()*shinchanImages.length)];
 	//Setting that random image
 	document.getElementById('shinchan').src=img;
 	var winWidth1 = window.innerWidth;
 	var winHeight1 = window.innerHeight;
-		
-		randomTop1 = getRandomNumber(0, winHeight1);
-		randomLeft1 = getRandomNumber(0, winWidth1);
-		
-		document.getElementById('shinchan').style.top= randomTop1 +"px";
-		document.getElementById('shinchan').style.left = randomLeft1 +"px";
+
+	randomTop1 = getRandomNumber(0, winHeight1);
+	randomLeft1 = getRandomNumber(0, winWidth1);
+
+	document.getElementById('shinchan').style.top= randomTop1 +"px";
+	document.getElementById('shinchan').style.left = randomLeft1 +"px";
 }
 
 function randomcsi(){
+
 	document.getElementById('csi').src='csi logo.jpg';
 	var winWidth2 = window.innerWidth;
 	var winHeight2 = window.innerHeight;
-		
-		randomTop2 = getRandomNumber(0, winHeight2);
-		randomLeft2 = getRandomNumber(0, winWidth2);
-		
-		document.getElementById('csi').style.top= randomTop2 +"px";
-		document.getElementById('csi').style.left = randomLeft2 +"px";
+
+	randomTop2 = getRandomNumber(0, winHeight2);
+	randomLeft2 = getRandomNumber(0, winWidth2);
+
+	document.getElementById('csi').style.top= randomTop2 +"px";
+	document.getElementById('csi').style.left = randomLeft2 +"px";
 }
 
 function getRandomNumber(min, max) {
-    
+
 	return Math.random() * (max - min) + min;
-	  
+
 }
 
 var score = 2;
+
 function strk() {
+
 	for (var i = 1; i <= score; i++) {
 		add();
 	}
@@ -89,6 +108,7 @@ function strk() {
 		score = 2
 	}
 }
+
 function add(submit) {
 
 	var element = document.createElement("input");
@@ -96,8 +116,7 @@ function add(submit) {
 	element.type = submit;
 	element.name = submit;
 	element.onclick = function () {
-		alert("Wrong");
-		window.location.reload();
+	wrong();
 	};
 	var foo = document.getElementById("Spann");
 	foo.appendChild(element);
@@ -105,6 +124,7 @@ function add(submit) {
 
 
 function shuffle() {
+
 	var container = document.getElementById("result");
 	var elementsArray = Array.prototype.slice.call(container.getElementsByClassName('mx'));
 	elementsArray.forEach(function (element) {
@@ -117,7 +137,8 @@ function shuffle() {
 }
 
 function shuffleArray(array) {
-	for (var i = array.length - 1; i > 0; i--) 
+
+	for (var i = array.length - 1; i > 0; i--)
 	{
 		var j = Math.floor(Math.random() * (i + 1));
 		var temp = array[i];
@@ -126,31 +147,5 @@ function shuffleArray(array) {
 	}
 	return array;
 
-	document.getElementById('shinchan').src=img;
-	var winWidth1 = window.innerWidth;
-	var winHeight1 = window.innerHeight;
-		
-		randomTop1 = getRandomNumber(0, winHeight1);
-		randomLeft1 = getRandomNumber(0, winWidth1);
-		
-		document.getElementById('shinchan').style.top= randomTop1 +"px";
-		document.getElementById('shinchan').style.left = randomLeft1 +"px";
-}
 
-function randomcsi(){
-	document.getElementById('csi').src='csi logo.jpg';
-	var winWidth2 = window.innerWidth;
-	var winHeight2 = window.innerHeight;
-		
-		randomTop2 = getRandomNumber(0, winHeight2);
-		randomLeft2 = getRandomNumber(0, winWidth2);
-		
-		document.getElementById('csi').style.top= randomTop2 +"px";
-		document.getElementById('csi').style.left = randomLeft2 +"px";
-}
-
-function getRandomNumber(min, max) {
-    
-	return Math.random() * (max - min) + min;
-	
 }
