@@ -81,7 +81,7 @@ function randomcsi(){
 	var winHeight2 = window.innerHeight;
 
 	randomTop2 = getRandomNumber(0, winHeight2);
-	randomLeft2 = getRandomNumber(0, winWidth2);
+	randomLeft2 = getRandomNumber(0, winWidth2)+600;
 
 	document.getElementById('csi').style.top= randomTop2 +"px";
 	document.getElementById('csi').style.left = randomLeft2 +"px";
